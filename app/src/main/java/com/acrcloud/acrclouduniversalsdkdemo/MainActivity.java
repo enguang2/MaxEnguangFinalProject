@@ -2,6 +2,7 @@ package com.acrcloud.acrclouduniversalsdkdemo;
 
 import android.Manifest;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.media.MediaPlayer;
 import android.os.Environment;
 import android.support.v4.app.ActivityCompat;
@@ -130,6 +131,16 @@ public class MainActivity extends AppCompatActivity implements IACRCloudListener
         ACRCloudLogger.setLog(true);
 
         this.initState = this.mClient.initWithConfig(this.mConfig);
+
+        //for removing superfluous buttons and text
+        findViewById(R.id.request_radio_meta).setVisibility(View.GONE);
+        findViewById(R.id.auto_switch).setVisibility(View.GONE);
+        findViewById(R.id.auto_switch_label).setVisibility(View.GONE);
+
+        // for changing button and background colors
+        findViewById(R.id.background).setBackgroundColor(Color.parseColor("#85d3f7"));
+        findViewById(R.id.start).setBackgroundColor(Color.WHITE);
+        findViewById(R.id.cancel).setBackgroundColor(Color.WHITE);
     }
 
     public void start() {
