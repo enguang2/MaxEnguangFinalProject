@@ -246,9 +246,9 @@ public class MainActivity extends AppCompatActivity implements IACRCloudListener
                     }
                 }
 
-                tres = tres + "\n\n" + result;
+                tres = tres + "\n\n";
             }else{
-                tres = result;
+                tres = "No matches found. Try again?";
             }
         } catch (JSONException e) {
             tres = result;
